@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navigation</title>
+
+        <!-- Include Fonts from Google's CDN -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+
+		<!-- Include AngularJS from Google's CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+		
+		<!-- Include styles -->
+		<link href="app.css" rel="stylesheet" />
+	</head>
+
+
+	<body ng-app="NavBar">
+
+		<div class="main" ng-controller="MainController">
+
+			<nav>
+
+				<a href="#" 
+				ng-repeat="navLink in navLinks"
+				ng-click="toggleActiveClass(navLink)"
+				ng-class="{'active': navLink == active}">{{navLink}}</a>
+
+			</nav>
+
+			<p>You chose: <span class="{{active}}">{{active}}</span></p>
+		</div>
+
+
+		<script src="app.js"></script>
+	</body>
+</html>
