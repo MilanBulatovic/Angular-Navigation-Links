@@ -4,7 +4,7 @@
 	    <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Navigation</title>
+        <title>Navigation Links</title>
 
         <!-- Include Fonts from Google's CDN -->
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
@@ -22,11 +22,16 @@
 		<div class="main" ng-controller="MainController">
 
 			<nav>
-
-				<a href="#" 
-				ng-repeat="navLink in navLinks"
-				ng-click="toggleActiveClass(navLink)"
-				ng-class="{'active': navLink == active}">{{navLink}}</a>
+				<!-- 
+				#Get all links from $scope.navLinks from MainController 
+				#On click apply function toggleActiveClass from MainController
+				#Toggle class 'active'
+				-->
+				<a href="#"
+					ng-repeat="navLink in navLinks"
+					ng-click="toggleActiveClass(navLink)"
+					ng-class="{'active': navLink == active}">{{navLink}}
+				</a>
 
 			</nav>
 
