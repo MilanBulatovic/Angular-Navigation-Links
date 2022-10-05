@@ -1,4 +1,4 @@
-var app = angular.module('NavBar', [ ]);
+var app = angular.module('NavLinks', [ ]);
 
 app.controller('MainController', ['$scope', function($scope) {
         $scope.navLinks = ['home', 'projects', 'services', 'contact'];
