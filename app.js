@@ -2,6 +2,7 @@
 var app = angular.module('NavLinks', [ ]);
 
 //register controller
+//something
 app.controller('MainController', ['$scope', function($scope) {
         $scope.navLinks = ['home', 'projects', 'services', 'contact'];
         $scope.active='';
